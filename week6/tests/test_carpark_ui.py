@@ -3,6 +3,11 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+#
+# The setup_function(function) only runs if "pytest" entered into the terminal
+# This is required for all tests as it removes any cars from previous tests
+# In addition, main.py is required to be running for the tests to work as expected
+#
 
 def setup_function(function):
     if os.path.exists("week6/data/vehicles.json"):
